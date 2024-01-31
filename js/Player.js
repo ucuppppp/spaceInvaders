@@ -56,7 +56,7 @@ export default class Player {
         if(event.code == 'ArrowLeft') {
             this.leftPressed = true
         }
-        if(event.code == 'Space') {
+        if(event.code == 'Space' || event.code == 'ArrowUp') {
             this.shootPressed = true
         }
     }
@@ -68,7 +68,7 @@ export default class Player {
         if(event.code == 'ArrowLeft') {
             this.leftPressed = false
         }
-        if(event.code == 'Space') {
+        if(event.code == 'Space' || event.code == 'ArrowUp') {
             this.shootPressed = false
         }
     }

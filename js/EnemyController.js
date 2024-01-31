@@ -8,7 +8,7 @@ export default class EnemyController {
         [2,2,2,3,3,3,3,2,2,2],
         [2,2,2,3,3,3,3,2,2,2],
         [1,1,1,1,1,1,1,1,1,1],
-        [2,2,2,2,2,2,2,2,2,2], 
+        [2,2,2,2,2,2,2,2,2,2]
     ]
 
     enemyRows = []
@@ -69,7 +69,6 @@ export default class EnemyController {
             const enemyIndex = Math.floor(Math.random() * allEnemies.length)
             const enemy = allEnemies[enemyIndex]
             this.enemyBulletController.shoot(enemy.x, enemy.y, -3)
-            console.log(enemyIndex)
         }
     }
 
@@ -88,7 +87,6 @@ export default class EnemyController {
 
     updateVelocityAndDirection() {
         for(const enemyRow of this.enemyRows) {
-            // console.log(this.moveDownTimer)
             if(this.currentDirection == MovingDirection.right) {
                 this.xVelocity = this.defaultXVelocity
                 this.yVelocity = 0
